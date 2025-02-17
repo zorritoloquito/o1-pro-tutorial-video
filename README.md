@@ -1,10 +1,14 @@
+NOTE: THIS REPO IS STILL UNDER DEVELOPMENT. CHECK BACK ON FEBRUARY 17th AT 10AM PT FOR THE FULL RELEASE.
+
 # Building Apps with the o1 Pro Template System
 
 This is the repo for a free workshop on how to use [OpenAI's o1-pro](https://chatgpt.com/) to build full-stack web apps with a [starter template](https://github.com/mckaywrigley/mckays-app-template).
 
-You can find the video for this workshop on [X]() and [YouTube]().
+It is part 1 of a 2 part series. This is the beginner workshop. The advanced workshop will be released on February 23rd.
 
-This workshop is also available in course form on [Takeoff]() - we will continue to add to it and keep it updated with the latest model releases over time.
+You can find the video for this workshop on [X](https://x.com/mckaywrigley) and [YouTube](https://www.youtube.com/channel/UCXZFVVCFahewxr3est7aT7Q): COMING SOON
+
+This workshop is also available in course form on [Takeoff](https://www.jointakeoff.com/) - we will continue to add to it and keep it updated with the latest model releases over time.
 
 Use code `O1PRO` for 25% off at checkout.
 
@@ -14,15 +18,9 @@ I get asked all the time for an example of content on Takeoff, so hopefully this
 
 My name is [Mckay](https://www.mckaywrigley.com/).
 
-I'm currently building [Takeoff](https://www.jointakeoff.com/) - the best place in the world to learn how to build with AI.
+I'm currently building [Takeoff](https://www.jointakeoff.com/) - the best place on the internet to learn how to build with AI.
 
 Follow me on [X](https://x.com/mckaywrigley) and subscribe to my [YouTube](https://www.youtube.com/channel/UCXZFVVCFahewxr3est7aT7Q) for more free AI coding tutorials & guides.
-
-## The Project
-
-In this workshop we will be building ReceiptAI - an intelligent document processing system that automatically extracts and organizes data from receipts and invoices using AI.
-
-This repo's `example` branch ([here]()) has the full example code for a complete version of the project.
 
 ## Tech Stack
 
@@ -53,9 +51,9 @@ You will likely not need paid plans unless you are building a business.
 
 ## Guide
 
-### Clone the starter template
+### Clone the repo
 
-1. Clone the [starter template](https://github.com/mckaywrigley/mckays-app-template):
+1. Clone this repo:
 
 ```bash
 git clone https://github.com/mckaywrigley/o1-pro-template-system receipt-ai
@@ -122,3 +120,9 @@ npm run dev
 ```
 
 3.  View the app on http://localhost:3000
+
+### Follow the workshop
+
+View the full workshop on [X](https://x.com/mckaywrigley) and [YouTube](https://www.youtube.com/channel/UCXZFVVCFahewxr3est7aT7Q): COMING SOON
+
+Or sign up for [Takeoff](https://www.jointakeoff.com/) to get access to the full workshop in course form.
