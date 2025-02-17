@@ -1,10 +1,8 @@
-NOTE: THIS REPO IS STILL UNDER DEVELOPMENT. CHECK BACK ON FEBRUARY 17th AT 10AM PT FOR THE FULL RELEASE.
-
 # Building Apps with the o1 Pro Template System
 
 This is the repo for a free workshop on how to use [OpenAI's o1-pro](https://chatgpt.com/) to build full-stack web apps with a [starter template](https://github.com/mckaywrigley/mckays-app-template).
 
-It is part 1 of a 2 part series. This is the beginner workshop. The advanced workshop will be released on February 23rd.
+It is part 1 of a 2 part series. This is the beginner workshop. The advanced workshop will be released on February 24th.
 
 ## Workshop Video
 
