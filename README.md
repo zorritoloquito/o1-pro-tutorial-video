@@ -6,6 +6,8 @@ This is the repo for a free workshop on how to use [OpenAI's o1-pro](https://cha
 
 It is part 1 of a 2 part series. This is the beginner workshop. The advanced workshop will be released on February 23rd.
 
+## Workshop Video
+
 You can find the video for this workshop on [X](https://x.com/mckaywrigley) and [YouTube](https://www.youtube.com/channel/UCXZFVVCFahewxr3est7aT7Q): COMING SOON
 
 This workshop is also available in course form on [Takeoff](https://www.jointakeoff.com/) - we will continue to add to it and keep it updated with the latest model releases over time.
