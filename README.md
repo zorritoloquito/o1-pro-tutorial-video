@@ -80,31 +80,6 @@ git branch -M main
 git push -u origin main
 ```
 
-### Set up environment variables
-
-1. Copy `.env.example` to `.env.local` and fill in the environment variables
-
-```bash
-cp .env.example .env.local
-```
-
-```bash
-# DB (Supabase)
-DATABASE_URL=
-
-# Auth (Clerk)
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/login
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/signup
-
-# Payments (Stripe)
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-NEXT_PUBLIC_STRIPE_PAYMENT_LINK_YEARLY=
-NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY=
-```
-
 ### Run the app
 
 1. Install dependencies:
