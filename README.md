@@ -8,7 +8,7 @@ It is part 1 of a 2 part series. This is the beginner workshop. The advanced wor
 
 ## Workshop Video
 
-You can find the video for this workshop on [X](https://x.com/mckaywrigley) and [YouTube](https://www.youtube.com/channel/UCXZFVVCFahewxr3est7aT7Q): COMING SOON
+You can find the video for this workshop on [X](https://x.com/mckaywrigley/status/1891544731496206365) and [YouTube](https://www.youtube.com/watch?v=Y4n_p9w8pGY).
 
 This workshop is also available in course form on [Takeoff](https://www.jointakeoff.com/) - we will continue to add to it and keep it updated with the latest model releases over time.
 
@@ -125,6 +125,6 @@ npm run dev
 
 ### Follow the workshop
 
-View the full workshop on [X](https://x.com/mckaywrigley) and [YouTube](https://www.youtube.com/channel/UCXZFVVCFahewxr3est7aT7Q): COMING SOON
+View the full workshop on [X](https://x.com/mckaywrigley/status/1891544731496206365) and [YouTube](https://www.youtube.com/watch?v=Y4n_p9w8pGY).
 
 Or sign up for [Takeoff](https://www.jointakeoff.com/) to get access to the full workshop in course form.
