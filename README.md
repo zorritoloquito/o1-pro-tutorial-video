@@ -56,7 +56,7 @@ You will likely not need paid plans unless you are building a business.
 1. Clone this repo:
 
 ```bash
-git clone https://github.com/mckaywrigley/o1-pro-template-system receipt-ai
+git clone https://github.com/mckaywrigley/o1-pro-template-system o1-pro-project
 ```
 
 2. Save the original remote as "upstream" before removing it:
