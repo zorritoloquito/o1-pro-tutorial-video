@@ -1,6 +1,7 @@
 ---
 description: Follow these rules for all requests.
 globs: 
+alwaysApply: false
 ---
 # Project Instructions
 
@@ -11,6 +12,12 @@ Write the complete code for every step. Do not get lazy.
 Your goal is to completely finish whatever I ask for.
 
 You will see  tags in the code. These are context tags that you should use to help you understand the codebase.
+
+-We are building a webapp to generate estimates
+-Find the steps in [project-steps.md](mdc:project-steps.md)
+-Work on whatever step(s) I tell you to work on and only work on those steps at once
+-Once those steps are done, mark as completed
+-Then stop, I will give you further instructions
 
 ## Overview
 
