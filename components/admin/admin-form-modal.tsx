@@ -19,6 +19,7 @@ interface AdminFormModalProps {
   initialOpen?: boolean
   triggerButtonVariant?: React.ComponentProps<typeof Button>["variant"]
   triggerButtonSize?: React.ComponentProps<typeof Button>["size"]
+  onOpenChange?: (open: boolean) => void // Add onOpenChange prop
   // Add other props like onOpenChange if needed
 }
 
