@@ -23,7 +23,7 @@
     *   **Step Dependencies**: None (based on starter template)
     *   **User Instructions**: Follow User Instructions from original Step 1 & Step 11 (ENV setup, Clerk setup, DB connection).
 
--   [ ] **Step 2: Basic App/Admin Layouts & Placeholders**
+-   [x] **Step 2: Basic App/Admin Layouts & Placeholders**
     *   **Task**: Create the main layout for authenticated users (`app/(app)/layout.tsx`) including `UserButton`. Create a basic dashboard page (`app/(app)/dashboard/page.tsx`). Create the Admin layout (`app/(admin)/layout.tsx`) with `isAdmin` check and redirect logic. Create a basic Admin placeholder page (`app/(admin)/dashboard/page.tsx`).
     *   **Files**:
         *   `app/(app)/layout.tsx` (Create)
