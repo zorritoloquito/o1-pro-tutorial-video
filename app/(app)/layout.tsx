@@ -2,6 +2,7 @@
 
 import { UserButton } from "@clerk/nextjs"
 import { auth } from "@clerk/nextjs/server"
+import { Toaster } from "sonner"
 
 export default async function AppLayout({
   children
@@ -27,6 +28,7 @@ export default async function AppLayout({
       {/* <footer className="border-t p-4 text-center text-sm text-muted-foreground">
         © {new Date().getFullYear()} Your Company
       </footer> */}
+      <Toaster richColors position="top-right" />
     </div>
   )
 }

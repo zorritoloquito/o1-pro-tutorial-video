@@ -30,41 +30,50 @@
  */
 
 import {
-  index,
   integer,
   numeric,
   pgTable,
   text,
   timestamp,
-  uuid
-} from "drizzle-orm/pg-core"
-import { estimatesTable } from "@/db/schema/estimates-schema"
+  uuid,
+  boolean
+} from "drizzle-orm/pg-core" // Added boolean
+import { estimatesTable } from "./estimates-schema"
 
-export const estimateLineItemsTable = pgTable(
-  "estimate_line_items",
-  {
-    id: uuid("id").defaultRandom().primaryKey(),
-    estimateId: uuid("estimate_id")
-      .references(() => estimatesTable.id, { onDelete: "cascade" }) // Link to estimates, cascade delete
-      .notNull(),
-    description: text("description").notNull(),
-    quantity: numeric("quantity", { precision: 10, scale: 2 }), // Allows for e.g., 1.5 hours
-    unitPrice: numeric("unit_price", { precision: 10, scale: 2 }), // e.g., price per foot, price per hour
-    lineTotal: numeric("line_total", { precision: 10, scale: 2 }), // Calculated: quantity * unitPrice
-    notes: text("notes"),
-    sortOrder: integer("sort_order").default(0).notNull(), // For ordering items in the UI/PDF
-    createdAt: timestamp("created_at").defaultNow().notNull(),
-    updatedAt: timestamp("updated_at")
-      .defaultNow()
-      .notNull()
-      .$onUpdate(() => new Date())
-  },
-  table => {
-    return {
-      estimateIdIdx: index("line_item_estimate_id_idx").on(table.estimateId)
-    }
-  }
-)
+export const estimateLineItemsTable = pgTable("estimate_line_items", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  estimateId: uuid("estimate_id")
+    .notNull()
+    .references(() => estimatesTable.id, { onDelete: "cascade" }),
+  // sortOrder helps maintain the 1-11 sequence, especially if custom lines are added later
+  sortOrder: integer("sort_order").notNull(),
+  description: text("description").notNull(),
+  quantity: numeric("quantity", { precision: 10, scale: 2 })
+    .default("1")
+    .notNull(),
+  rate: numeric("rate", { precision: 10, scale: 2 }).default("0").notNull(),
+  // Total should ideally be calculated dynamically or via DB trigger,
+  // but storing it simplifies reads. Ensure it's updated correctly.
+  total: numeric("total", { precision: 10, scale: 2 }).default("0").notNull(),
+  isTaxable: boolean("is_taxable").default(false).notNull(), // Kept for QBO/future use
+  notes: text("notes"), // Allow adding notes later
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at")
+    .defaultNow()
+    .notNull()
+    .$onUpdate(() => new Date())
+})
 
 export type InsertEstimateLineItem = typeof estimateLineItemsTable.$inferInsert
 export type SelectEstimateLineItem = typeof estimateLineItemsTable.$inferSelect
+
+// Type for the data returned by the calculator before saving
+export interface CalculatedLineItem {
+  sortOrder: number
+  description: string
+  quantity: number | string // Allow string for precision
+  rate: number | string // Allow string for precision
+  total: number | string // Allow string for precision
+  notes?: string | null
+  isTaxable?: boolean
+}

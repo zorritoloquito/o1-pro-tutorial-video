@@ -33,7 +33,7 @@
     *   **Step Dependencies**: Step 1
     *   **User Instructions**: Manually set `isAdmin=true` for a test user in Supabase DB.
 
--   [ ] **Step 3: Reusable Admin Components & Settings Management**
+-   [x] **Step 3: Reusable Admin Components & Settings Management**
     *   **Task**: Create reusable `AdminDataTable` (`components/admin/admin-data-table.tsx`) and `AdminFormModal` (`components/admin/admin-form-modal.tsx`) client components. Implement Settings CRUD actions (`actions/db/settings-actions.ts`). Build the Admin Settings page (`app/(admin)/settings/page.tsx`) and its form (`_components/settings-form.tsx`) using the actions to manage company info and basic email settings (QBO fields added later).
     *   **Files**:
         *   `components/admin/admin-data-table.tsx` (Create)
@@ -44,7 +44,7 @@
     *   **Step Dependencies**: Step 1, Step 2
     *   **User Instructions**: Manually insert a default row into the `settings` table via Supabase SQL editor.
 
--   [ ] **Step 4: Admin Materials Management**
+-   [x] **Step 4: Admin Materials Management**
     *   **Task**: Implement Material CRUD server actions (`actions/db/materials-actions.ts`). Build the Admin Materials page (`app/(admin)/materials/page.tsx`) using `AdminDataTable` and `AdminFormModal` for full CRUD operations on materials. Include the specific material form fields (`_components/material-form.tsx`).
     *   **Files**:
         *   `actions/db/materials-actions.ts` (Create)
@@ -54,7 +54,7 @@
     *   **Step Dependencies**: Step 1, Step 2, Step 3
     *   **User Instructions**: None
 
--   [ ] **Step 5: Admin Labor Rates Management**
+-   [x] **Step 5: Admin Labor Rates Management**
     *   **Task**: Implement Labor Rate CRUD server actions (`actions/db/labor-rates-actions.ts`). Build the Admin Labor Rates page (`app/(admin)/labor-rates/page.tsx`) using `AdminDataTable` and `AdminFormModal` for full CRUD operations. Include the specific labor rate form fields (`_components/labor-rate-form.tsx`).
     *   **Files**:
         *   `actions/db/labor-rates-actions.ts` (Create)
@@ -64,7 +64,7 @@
     *   **Step Dependencies**: Step 1, Step 2, Step 3
     *   **User Instructions**: Use the Admin UI to add sample Materials and Labor Rates needed for calculations.
 
--   [ ] **Step 6: Admin Equipment Management**
+-   [x] **Step 6: Admin Equipment Management**
     *   **Task**: Implement Equipment CRUD server actions (`actions/db/equipment-actions.ts`). Build the Admin Equipment page (`app/(admin)/equipment/page.tsx`) using `AdminDataTable` and `AdminFormModal` for full CRUD operations. Include the specific equipment form fields (`_components/equipment-form.tsx`).
     *   **Files**:
         *   `actions/db/equipment-actions.ts` (Create)
@@ -74,7 +74,7 @@
     *   **Step Dependencies**: Step 1, Step 2, Step 3
     *   **User Instructions**: None
 
--   [ ] **Step 7: Core Calculation Logic & Estimate Actions**
+-   [x] **Step 7: Core Calculation Logic & Estimate Actions**
     *   **Task**: Implement the core `calculateEstimateLineItems` function in `lib/calculations/estimate-calculator.ts`, including fetching necessary data (materials, labor rates) and performing calculations as per spec. Implement basic Estimate and Line Item CRUD actions (`actions/db/estimates-actions.ts`, `actions/db/estimate-line-items-actions.ts`), ensuring `createEstimateAction` calls the calculator and saves the estimate with its initial line items.
     *   **Files**:
         *   `lib/calculations/estimate-calculator.ts` (Create)
@@ -87,7 +87,7 @@
     *   **Step Dependencies**: Step 1, Step 4, Step 5
     *   **User Instructions**: Ensure the specific calculation formulas from the spec's `<logic>` are implemented. Ensure sample Materials/Labor data exists via Admin UI.
 
--   [ ] **Step 8: Customer Actions & Estimate Creation UI**
+-   [x] **Step 8: Customer Actions & Estimate Creation UI**
     *   **Task**: Implement Customer CRUD actions (`actions/db/customers-actions.ts`). Build the Create Estimate page (`app/(app)/estimates/create/page.tsx`) which fetches customers. Build the `EstimateForm` client component (`_components/estimate-form.tsx` or `components/estimates/estimate-form.tsx`) with all inputs, validation, and logic to call `createEstimateAction` on submit, handle loading/results, and redirect on success.
     *   **Files**:
         *   `actions/db/customers-actions.ts` (Create)
@@ -96,7 +96,7 @@
     *   **Step Dependencies**: Step 1, Step 2, Step 7
     *   **User Instructions**: Ensure `sonner` toast notifications are set up.
 
--   [ ] **Step 9: Estimate Listing, Viewing & Editing UI**
+-   [x] **Step 9: Estimate Listing, Viewing & Editing UI**
     *   **Task**: Build the List Estimates page (`app/(app)/estimates/page.tsx`) fetching and displaying user's estimates with links. Create the View/Edit Estimate dynamic page (`app/(app)/estimates/[estimateId]/page.tsx`) fetching estimate data. Create the editable `EstimateLineItemTable` component (`components/estimates/estimate-line-item-table.tsx`). Create the `EstimateEditor` client component (`_components/estimate-editor.tsx`) to display data, manage line item state via the table, and handle saving changes via `updateEstimateAction`.
     *   **Files**:
         *   `app/(app)/estimates/page.tsx` (Create)
